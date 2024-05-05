@@ -1,0 +1,120 @@
+#experience{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.expTitle{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+.expDesc{
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 51rem;
+    padding: 0 2rem;
+}
+.expBars{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}
+.expBar{
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+}
+.expBarImg{
+    object-fit: cover;
+    height: 4rem;
+    width: 10rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+.expBarText{
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+.expBarText2 {
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between; /* Position items with space between */
+    flex-grow: 1; /* Allow text to take up remaining space */
+  }
+  
+.expBarText2 p1 {
+    margin-left: 5rem; /* Remove default margin */
+}
+.expDetails h3, .expDetails p {
+    margin: 0; /* Remove default margins */
+}
+@media screen and (max-width:720px) {
+     .expBarText>p{
+        font-size: 2vw;
+     }
+}
+@media screen and (max-width:480) {
+    .expBarText>p{
+       font-size: 1.5vw;
+    }
+    .expBarImg{
+        height: 2.25rem;
+        width: 2.25rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+    .expBarText>h2{
+        font-size: 2.5vw;
+    }
+    .expBarText2{
+        font-size: 3vw;
+    }
+}
+@media screen and (max-width:420px) {
+    .expBarText>p{
+       font-size: 4vw;
+    }
+    .expBarImg{
+        height: 2rem;
+        width: 2rem;
+    }
+    .expBarText>h2{
+        font-size: 2.5vw;
+    }
+    .expBarText2{
+        font-size: 3vw;
+    }
+    .expBarText2>p1{
+        margin-left: 1rem;
+    }
+}
+@media screen and (max-width:380px) {
+    .expBarText>p{
+       font-size: 4vw;
+    }
+    .expBarImg{
+        height: 2rem;
+        width: 2rem;
+    }
+    .expBarText>h2{
+        font-size: 1.5vw;
+    }
+    .expBarText2{
+        font-size: 3vw;
+    }
+    .expBarText2>p1{
+        margin-left: 1rem;
+    }
+}
