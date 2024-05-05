@@ -1,7 +1,5 @@
 import React from "react";
 import "./experience.css";
-import ashiyana from "../../assets/ashiyana.png";
-import spintly from "../../assets/Spintly.png";
 
 const Experience = () => {
   return (

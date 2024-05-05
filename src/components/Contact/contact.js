@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contact.css";
 import whatsapp from "../../assets/whatsapp.png";
 import instagram from "../../assets/instagram.png";
 import linkedin from "../../assets/linkedIn.png";
 import github from "../../assets/github.png";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_8mw3hsl", "template_jqh0n29", form.current, {
+        publicKey: "3tPmu5O6CDO6t_VGx",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          e.target.reset();
+          alert("Email Sent!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <section id="contactPage">
       <div id="contact">
@@ -12,10 +34,25 @@ const Contact = () => {
         <span className="contactDesc">
           Please fill out the form below to discuss any work opportunities
         </span>
-        <form className="contactForm">
-          <input type="text" className="name" placeholder="Name" />
-          <input type="email" className="email" placeholder="Email" />
-          <textarea className="message" rows={5} placeholder="Message" />
+        <form className="contactForm" ref={form} onSubmit={sendEmail}>
+          <input
+            type="text"
+            className="name"
+            placeholder="Your Name"
+            name="from_name"
+          />
+          <input
+            type="email"
+            className="email"
+            placeholder="Your Email"
+            name="from_email"
+          />
+          <textarea
+            className="message"
+            name="message"
+            rows={5}
+            placeholder="Your Message"
+          />
           <button type="submit" value="send" className="submitBtn">
             Submit
           </button>
