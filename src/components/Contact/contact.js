@@ -20,10 +20,18 @@ const Contact = () => {
             Submit
           </button>
           <div className="links">
-            <img src={whatsapp} alt="whatsapp" className="link"></img>
-            <img src={instagram} alt="instagram" className="link"></img>
-            <img src={linkedin} alt="linkedin" className="link"></img>
-            <img src={github} alt="github" className="link"></img>
+            <a href="https://wa.me/qr/OIL3VSKZFZQIG1">
+              <img src={whatsapp} alt="whatsapp" className="link"></img>
+            </a>
+            <a href="https://www.instagram.com/_fardin_xec?igsh=MXNkYXlocW8zY2xmeQ==">
+              <img src={instagram} alt="instagram" className="link"></img>
+            </a>
+            <a href="https://www.linkedin.com/in/abdulla-shaikh-8256801b8">
+              <img src={linkedin} alt="linkedin" className="link"></img>
+            </a>
+            <a href="https://github.com/XecFardin">
+              <img src={github} alt="github" className="link"></img>
+            </a>
           </div>
         </form>
       </div>
