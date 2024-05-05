@@ -20,7 +20,6 @@ const Experience = () => {
       </span>
       <div className="expBars">
         <div className="expBar">
-          <img src={ashiyana} alt="go" className="expBarImg"></img>
           <div className="expBarText">
             <h3>Freelancing</h3>
             <div className="expBarText2">
@@ -45,7 +44,6 @@ const Experience = () => {
           </div>
         </div>
         <div className="expBar">
-          <img src={spintly} alt="go" className="expBarImg"></img>
           <div className="expBarText">
             <h3>Spintly Private Limited</h3>
             <div className="expBarText2">
